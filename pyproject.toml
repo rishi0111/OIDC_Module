@@ -36,3 +36,7 @@ include = ["pretalx*"]
 
 [tool.check-manifest]
 ignore = [".*"]
+
+[tool.poetry.dependencies]
+django = "^3.2"
+djangorestframework = "^3.12"
