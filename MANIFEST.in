@@ -1,0 +1,6 @@
+recursive-include oidc/static *
+recursive-include oidc/templates *
+exclude oidc/locale/django.pot
+recursive-include oidc/locale *
+recursive-include oidc *.py
+include Makefile

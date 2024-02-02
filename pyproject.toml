@@ -1,0 +1,38 @@
+[project]
+name = "oidc"
+dynamic = ["version"]
+description = "SSO"
+readme = "README.rst"
+license = {text = "Apache Software License"}
+keywords = ["pretalx"]
+authors = [
+  {name = "Rishi", email = "rishi@snakescript.com"},
+]
+maintainers = [
+  {name = "Rishi", email = "rishi@snakescript.com"},
+]
+
+dependencies = []
+
+[project.urls]
+homepage = "https://github.com/snakedev24/OIDC_Module.git"
+repository = "https://github.com/snakedev24/OIDC_Module.git.git"
+
+[project.entry-points."pretalx.plugin"]
+oidc = "oidc:PretalxPluginMeta"
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "oidc.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pretalx*"]
+
+[tool.check-manifest]
+ignore = [".*"]
